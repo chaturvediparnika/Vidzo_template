@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samiksha Lab | Generate Question Paper</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .header h1 {
+      font-size: 2.8em;
+      margin: 0;
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .form-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 600px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1em;
+    }
+    .checkbox-group {
+      margin-top: 15px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: normal;
+    }
+    button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Samiksha Lab</h1>
+    <p>Select your class and chapters to generate a custom question paper</p>
+  </div>
+
+  <div class="form-box">
+    <form action="/generate-paper" method="POST">
+      <label for="class">Class</label>
+      <select id="class" name="class" required>
+        <option selected disabled>Select Class</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+      </select>
+
+      <label>Select Chapters</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="chapters[]" value="Motion" /> Motion</label>
+        <label><input type="checkbox" name="chapters[]" value="Light" /> Light</label>
+        <label><input type="checkbox" name="chapters[]" value="Electricity" /> Electricity</label>
+        <label><input type="checkbox" name="chapters[]" value="Atoms and Molecules" /> Atoms and Molecules</label>
+        <label><input type="checkbox" name="chapters[]" value="Structure of the Atom" /> Structure of the Atom</label>
+        <label><input type="checkbox" name="chapters[]" value="Chemical Reactions" /> Chemical Reactions</label>
+        <label><input type="checkbox" name="chapters[]" value="Our Environment" /> Our Environment</label>
+        <label><input type="checkbox" name="chapters[]" value="Human Physiology" /> Human Physiology</label>
+        <label><input type="checkbox" name="chapters[]" value="Genetics" /> Genetics</label>
+        <label><input type="checkbox" name="chapters[]" value="Thermodynamics" /> Thermodynamics</label>
+        <label><input type="checkbox" name="chapters[]" value="Magnetism" /> Magnetism</label>
+        <label><input type="checkbox" name="chapters[]" value="Evolution" /> Evolution</label>
+      </div>
+
+      <button type="submit">Generate Paper</button>
+    </form>
+  </div>
+</body>
+</html>

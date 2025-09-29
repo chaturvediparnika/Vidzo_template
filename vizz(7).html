@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vizz Quiz Selector</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+    .top-bar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      font-size: 1.2em;
+    }
+    .logo {
+      font-weight: bold;
+    }
+    .vidzo {
+      font-weight: bold;
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    .selector-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 600px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1em;
+    }
+    button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(to right, #ff6a00, #ee0979);
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <div class="logo">Vizz</div>
+    <div class="vidzo">Vidzo</div>
+  </div>
+
+  <h1>Pick Your Path, Prove Your Power</h1>
+  <p>Choose your class, subject, and chapter. Science chapters only for now.</p>
+
+  <div class="selector-box">
+    <label for="class">Class</label>
+    <select id="class">
+      <option selected disabled>Select Class</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <select id="subject">
+      <option selected disabled>Select Subject</option>
+      <option>Science</option>
+      <option>Maths</option>
+      <option>English</option>
+      <option>SST</option>
+      <option>Hindi</option>
+    </select>
+
+    <label for="chapter">Chapter</label>
+    <select id="chapter">
+      <option selected disabled>Select Chapter</option>
+      <option>Motion</option>
+      <option>Light</option>
+      <option>Electricity</option>
+      <option>Atoms and Molecules</option>
+      <option>Structure of the Atom</option>
+      <option>Chemical Reactions</option>
+      <option>Our Environment</option>
+      <option>Human Physiology</option>
+      <option>Genetics</option>
+      <option>Thermodynamics</option>
+      <option>Magnetism</option>
+      <option>Evolution</option>
+    </select>
+
+    <button>START QUIZ</button>
+  </div>
+</body>
+</html>
